@@ -52,10 +52,11 @@ img { -webkit-user-drag: none; }
 }
 
 /* tab karya: bilah tab menyesuaikan saat navbar bersembunyi */
-.tabbar { padding-top: .75rem; transition: padding-top .3s ease; }
+.tabbar { padding-top: .75rem; }
 @media (min-width: 768px) {
-  .tabbar { padding-top: 5rem; }
-  body[data-nav='hidden'] .tabbar { padding-top: .5rem; }
+  /* tinggi bilah tetap; hanya posisi menempel yang bergeser saat navbar muncul/sembunyi (tanpa menggeser isi di bawahnya) */
+  .tabbar { position: sticky; top: 4.75rem; transition: top .3s ease; }
+  body[data-nav='hidden'] .tabbar { top: 0; }
 }
 
 /* versi cetak (Simpan PDF): 10 halaman 16:9 dari komponen deck */

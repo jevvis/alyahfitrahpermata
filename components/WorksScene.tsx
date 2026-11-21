@@ -118,7 +118,7 @@ export default function WorksScene() {
   return (
     <section id="works" className="relative bg-white text-crimson-700">
       {/* tab kategori (menempel di atas saat scroll) */}
-      <div className="tabbar z-30 border-b border-crimson-500/10 bg-white/90 backdrop-blur md:sticky md:top-0">
+      <div className="tabbar z-30 border-b border-crimson-500/10 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 pb-0 sm:px-10">
           <div className="no-scrollbar -mb-px grid w-full grid-cols-2 gap-1.5 pb-2 md:flex md:gap-1 md:overflow-x-auto md:pb-0" role="tablist">
             {CATEGORIES.map((c, i) => (

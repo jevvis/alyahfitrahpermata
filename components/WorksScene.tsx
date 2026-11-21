@@ -118,16 +118,16 @@ export default function WorksScene() {
   return (
     <section id="works" className="relative bg-white text-crimson-700">
       {/* tab kategori (menempel di atas saat scroll) */}
-      <div className="tabbar sticky top-0 z-30 border-b border-crimson-500/10 bg-white/90 backdrop-blur">
+      <div className="tabbar z-30 border-b border-crimson-500/10 bg-white/90 backdrop-blur md:sticky md:top-0">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 pb-0 sm:px-10">
-          <div className="no-scrollbar -mb-px flex gap-1 overflow-x-auto" role="tablist">
+          <div className="no-scrollbar -mb-px grid w-full grid-cols-2 gap-1.5 pb-2 md:flex md:gap-1 md:overflow-x-auto md:pb-0" role="tablist">
             {CATEGORIES.map((c, i) => (
               <button
                 key={c.id}
                 role="tab"
                 aria-selected={tab === i}
                 onClick={() => setTab(i)}
-                className={`shrink-0 rounded-t-xl px-4 py-2.5 text-sm font-bold transition-all duration-300 sm:px-6 ${tab === i ? 'rounded-full bg-crimson-500 text-white shadow-[0_8px_18px_rgba(36,87,214,.35)]' : 'text-crimson-500 hover:bg-crimson-500/5'}`}
+                className={`rounded-full px-2 py-2 text-center text-[13px] font-bold leading-tight transition-all duration-300 md:shrink-0 md:rounded-t-xl md:px-6 md:py-2.5 md:text-sm ${tab === i ? 'rounded-full bg-crimson-500 text-white shadow-[0_8px_18px_rgba(36,87,214,.35)]' : 'text-crimson-500 hover:bg-crimson-500/5'}`}
               >
                 {t(`cat.${c.id}.name`)}
               </button>

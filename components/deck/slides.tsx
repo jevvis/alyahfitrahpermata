@@ -32,9 +32,9 @@ function Title({ children, seed, rot = -3, size = 52, className = '' }: { childr
 function Wax() {
   return (
     <svg width="84" height="84" viewBox="0 0 74 74" aria-hidden="true">
-      <defs><radialGradient id="wx" cx="40%" cy="35%"><stop offset="0" stopColor="#b3281f" /><stop offset="1" stopColor="#76130e" /></radialGradient></defs>
+      <defs><radialGradient id="wx" cx="40%" cy="35%"><stop offset="0" stopColor="#3d6bdc" /><stop offset="1" stopColor="#17399a" /></radialGradient></defs>
       <path d="M37 4c8 0 11 6 18 8 8 3 14 8 12 17-1 6 5 9 3 17-2 8-9 9-12 15-4 7-12 10-21 9-9-1-13-7-19-12C11 53 4 49 6 41c2-7-3-11 0-18C9 15 17 14 23 9c5-3 8-5 14-5z" fill="url(#wx)" />
-      <path d="M37 51c-9-7-14-12-14-18 0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 6-5 11-14 18z" fill="#8f1b14" stroke="#b83a2e" strokeWidth="1.2" />
+      <path d="M37 51c-9-7-14-12-14-18 0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 6-5 11-14 18z" fill="#1f46b0" stroke="#7fa0f2" strokeWidth="1.2" />
     </svg>
   )
 }
@@ -45,7 +45,7 @@ export function CoverSlide() {
   return (
     <div className={`${FRAME} bg-crimson-700`}>
       <div className="absolute inset-0" style={mono()} />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(60,0,14,.55)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(6,16,64,.55)_100%)]" />
       <div className="a absolute left-[90px] top-[120px]" style={S({ rotate: '-3deg' })}>
         <PaperSticker seed={11} innerClassName="px-[70px] py-[44px]">
           <Word text={t('cover.port')} />
@@ -56,7 +56,7 @@ export function CoverSlide() {
         <div className="absolute inset-x-0 bottom-0 top-[120px]">
           <PaperSticker seed={23} tone="paper" className="h-full" innerClassName="h-full w-full"><span className="block h-full w-full" /></PaperSticker>
         </div>
-        <img src="/profile.png" alt="Alyah Fitrah Permata" className="absolute bottom-0 left-1/2 h-[580px] w-auto -translate-x-1/2 drop-shadow-[0_14px_16px_rgba(40,0,10,.45)]" />
+        <img src="/profile.png" alt="Alyah Fitrah Permata" className="absolute bottom-0 left-1/2 h-[580px] w-auto -translate-x-1/2 drop-shadow-[0_14px_16px_rgba(6,14,55,.45)]" />
       </div>
       <div className="a absolute bottom-[56px] left-[90px] text-cream" style={S({ '--d': '400ms' })}>
         <p className="text-[34px] font-extrabold italic leading-tight">{t('cover.name')} <span className="text-[26px] font-light not-italic">{t('cover.year')}</span></p>
@@ -71,13 +71,13 @@ export function AboutSlide() {
   const { t } = useLanguage()
   return (
     <div className={`${FRAME} bg-[#fbf7f0]`}>
-      <div className="absolute inset-0 opacity-70" style={mono('rgba(130,0,30,0.06)')} />
+      <div className="absolute inset-0 opacity-70" style={mono('rgba(23,57,154,0.06)')} />
       <div className="absolute left-[60px] top-[34px] z-20"><Title seed={3} rot={-4}>{t('about.title')}</Title></div>
       <div className="a absolute left-[60px] top-[120px] h-[560px] w-[760px]" style={S({ '--d': '120ms' })}>
         <PaperSticker seed={21} tone="paper" className="h-full" innerClassName="relative h-full px-10 py-9">
           <span className="absolute left-6 top-4 flex gap-4">{[0, 1, 2].map((i) => <i key={i} className="h-4 w-4 rounded-full bg-[#fbf7f0] shadow-[inset_0_1px_2px_rgba(0,0,0,.25)]" />)}</span>
           <div className="flex h-full items-end gap-8 pt-4">
-            <img src="/profile.png" alt="Alyah Fitrah Permata" className="h-[470px] w-auto -rotate-2 drop-shadow-[0_10px_14px_rgba(60,0,10,.3)]" />
+            <img src="/profile.png" alt="Alyah Fitrah Permata" className="h-[470px] w-auto -rotate-2 drop-shadow-[0_10px_14px_rgba(8,20,70,.3)]" />
             <div className="pb-2">
               <p className="text-[19px] leading-relaxed text-crimson-700">{t('about.bio')}</p>
               <p className="mt-6 text-[15px] font-extrabold tracking-wide text-crimson-700">{t('about.software')}</p>
@@ -114,7 +114,7 @@ export function EduExpSlide() {
   const { t } = useLanguage()
   return (
     <div className={`${FRAME} bg-[#fbf7f0]`}>
-      <div className="absolute inset-0 opacity-70" style={mono('rgba(130,0,30,0.06)')} />
+      <div className="absolute inset-0 opacity-70" style={mono('rgba(23,57,154,0.06)')} />
       <div className="absolute left-[60px] top-[34px] z-20"><Title seed={9} rot={-2}>{t('about.edu')}</Title></div>
       <div className="a absolute left-[60px] top-[130px] h-[540px] w-[520px]" style={S({ '--d': '120ms' })}>
         <PaperSticker seed={41} tone="paper" className="h-full" innerClassName="h-full px-10 py-10">
@@ -208,7 +208,7 @@ function Caption({ col, className = '' }: { col: number; className?: string }) {
   )
 }
 
-const shadow = 'shadow-[0_22px_40px_rgba(60,0,10,.28)]'
+const shadow = 'shadow-[0_22px_40px_rgba(8,20,70,.28)]'
 
 /* 5. Desain edukasi (poster) */
 export function PosterSlide() {
@@ -227,7 +227,7 @@ export function PosterSlide() {
 
 function Phone({ src, handle, d }: { src: string; handle: string; d: number }) {
   return (
-    <div className="a w-[218px] rounded-[2rem] bg-[#15151a] p-2 shadow-[0_28px_50px_rgba(40,0,10,.35)]" style={S({ '--d': `${d}ms` })}>
+    <div className="a w-[218px] rounded-[2rem] bg-[#15151a] p-2 shadow-[0_28px_50px_rgba(6,14,55,.35)]" style={S({ '--d': `${d}ms` })}>
       <div className="overflow-hidden rounded-[1.5rem] bg-white">
         <div className="mx-auto mt-1.5 h-3.5 w-16 rounded-full bg-[#15151a]" />
         <div className="flex items-center gap-2 px-3 py-2"><span className="h-5 w-5 rounded-full bg-crimson-500" /><span className="text-[10px] font-bold text-[#222]">{handle}</span></div>

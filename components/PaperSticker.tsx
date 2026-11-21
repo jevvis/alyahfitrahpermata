@@ -18,7 +18,7 @@ const TONE = {
 /** Kertas sobek: parent memberi bayangan (drop-shadow), anak dipotong dengan clip-path tak beraturan. */
 export default function PaperSticker({ seed = 1, tone = 'cream', className = '', innerClassName = '', style, children }: Props) {
   return (
-    <div className={className} style={{ filter: 'drop-shadow(0 12px 16px rgba(60,0,10,.32))', ...style }}>
+    <div className={className} style={{ filter: 'drop-shadow(0 12px 16px rgba(8,20,70,.32))', ...style }}>
       <div
         className={`${TONE[tone]} ${innerClassName}`}
         style={{

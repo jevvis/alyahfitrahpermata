@@ -20,10 +20,10 @@ function Wax() {
   return (
     <svg width="74" height="74" viewBox="0 0 74 74" aria-hidden="true">
       <defs>
-        <radialGradient id="wx" cx="40%" cy="35%"><stop offset="0" stopColor="#b3281f" /><stop offset="1" stopColor="#76130e" /></radialGradient>
+        <radialGradient id="wx" cx="40%" cy="35%"><stop offset="0" stopColor="#3d6bdc" /><stop offset="1" stopColor="#17399a" /></radialGradient>
       </defs>
       <path d="M37 4c8 0 11 6 18 8 8 3 14 8 12 17-1 6 5 9 3 17-2 8-9 9-12 15-4 7-12 10-21 9-9-1-13-7-19-12C11 53 4 49 6 41c2-7-3-11 0-18C9 15 17 14 23 9c5-3 8-5 14-5z" fill="url(#wx)" />
-      <path d="M37 51c-9-7-14-12-14-18 0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 6-5 11-14 18z" fill="#8f1b14" stroke="#b83a2e" strokeWidth="1.2" />
+      <path d="M37 51c-9-7-14-12-14-18 0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 6-5 11-14 18z" fill="#1f46b0" stroke="#7fa0f2" strokeWidth="1.2" />
     </svg>
   )
 }
@@ -38,7 +38,7 @@ export default function AboutCollage() {
   const { t } = useLanguage()
   return (
     <section id="about" className="relative overflow-hidden bg-[#fbf7f0] px-4 py-24 sm:px-8">
-      <div className="absolute inset-0 opacity-70" style={{ backgroundImage: monogramBg('AP', 'rgba(130,0,30,0.06)'), backgroundSize: '170px 170px' }} />
+      <div className="absolute inset-0 opacity-70" style={{ backgroundImage: monogramBg('AP', 'rgba(23,57,154,0.06)'), backgroundSize: '170px 170px' }} />
       <div className="relative mx-auto grid max-w-6xl gap-8 md:grid-cols-12">
         <div className="md:col-span-7">
           <div className="reveal relative pt-6">
@@ -46,7 +46,7 @@ export default function AboutCollage() {
             <PaperSticker seed={21} tone="paper" innerClassName="relative px-6 pb-8 pt-16 sm:px-9">
               <span className="absolute left-5 top-4 flex gap-3">{[0, 1, 2].map((i) => <i key={i} className="h-3.5 w-3.5 rounded-full bg-[#fbf7f0] shadow-[inset_0_1px_2px_rgba(0,0,0,.25)]" />)}</span>
               <div className="grid items-center gap-5 sm:grid-cols-[minmax(150px,230px)_1fr]">
-                <img src="/profile.png" alt="Alyah Fitrah Permata" className="mx-auto w-[62%] -rotate-2 drop-shadow-[0_10px_14px_rgba(60,0,10,.3)] sm:w-full" />
+                <img src="/profile.png" alt="Alyah Fitrah Permata" className="mx-auto w-[62%] -rotate-2 drop-shadow-[0_10px_14px_rgba(8,20,70,.3)] sm:w-full" />
                 <div>
                   <p className="text-[15px] leading-relaxed text-crimson-700 sm:-rotate-1 sm:text-base">{t('about.bio')}</p>
                   <p className="mt-5 text-sm font-extrabold tracking-wide text-crimson-700">{t('about.software')}</p>
@@ -105,7 +105,7 @@ export default function AboutCollage() {
             <PaperSticker seed={55} tone="paper" innerClassName="px-6 pb-6 pt-14">
               <div className="space-y-4 text-sm text-crimson-700">
                 <p className="flex items-center gap-3"><Icon d={<><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></>} />{CONTACT.city}</p>
-                <button onClick={() => scrollToId('contact')} className="no-print w-full rounded-full bg-crimson-700 px-5 py-2.5 text-sm font-bold text-cream shadow-[0_8px_18px_rgba(92,1,18,.35)] transition hover:bg-crimson-900">{t('about.cta')}</button>
+                <button onClick={() => scrollToId('contact')} className="no-print w-full rounded-full bg-crimson-700 px-5 py-2.5 text-sm font-bold text-cream shadow-[0_8px_18px_rgba(11,31,94,.35)] transition hover:bg-crimson-900">{t('about.cta')}</button>
               </div>
             </PaperSticker>
           </div>

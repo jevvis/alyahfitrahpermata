@@ -30,7 +30,7 @@ export default function CoverScene() {
   return (
     <section id="cover" className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-crimson-700 px-4 pb-28 pt-24">
       <div className="absolute inset-0" style={{ backgroundImage: monogramBg('AP'), backgroundSize: '170px 170px', transform: `translateY(${shift * 0.12}px)` }} />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(60,0,14,.55)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(6,16,64,.55)_100%)]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center md:flex-row md:justify-center">
         <div className="stick in relative z-10" style={{ ['--r' as string]: '-3deg', animation: 'none' } as React.CSSProperties} aria-label="Portfolio">
@@ -46,7 +46,7 @@ export default function CoverScene() {
               <span className="block h-full w-full" />
             </PaperSticker>
           </div>
-          <img src="/profile.png" alt="Alyah Fitrah Permata" className="relative mx-auto h-[min(44svh,360px)] w-auto drop-shadow-[0_14px_16px_rgba(40,0,10,.45)] md:h-[min(58svh,520px)]" />
+          <img src="/profile.png" alt="Alyah Fitrah Permata" className="relative mx-auto h-[min(44svh,360px)] w-auto drop-shadow-[0_14px_16px_rgba(6,14,55,.45)] md:h-[min(58svh,520px)]" />
         </div>
       </div>
 

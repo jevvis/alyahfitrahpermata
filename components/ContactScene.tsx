@@ -36,7 +36,7 @@ export default function ContactScene() {
               <label className="block"><span className="mb-1 block text-xs font-bold text-crimson-700">{t('ct.name')}</span><input className={field} value={name} onChange={(e) => setName(e.target.value)} placeholder={t('ct.namePh')} required /></label>
               <label className="block"><span className="mb-1 block text-xs font-bold text-crimson-700">{t('ct.email')}</span><input className={field} type="email" value={mail} onChange={(e) => setMail(e.target.value)} placeholder={t('ct.emailPh')} required /></label>
               <label className="block"><span className="mb-1 block text-xs font-bold text-crimson-700">{t('ct.message')}</span><textarea className={`${field} min-h-[110px] resize-y`} value={msg} onChange={(e) => setMsg(e.target.value)} placeholder={t('ct.messagePh')} required /></label>
-              <button type="submit" className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full bg-crimson-700 px-5 py-3 text-sm font-bold text-cream shadow-[0_10px_22px_rgba(92,1,18,.4)] transition hover:bg-crimson-900">
+              <button type="submit" className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full bg-crimson-700 px-5 py-3 text-sm font-bold text-cream shadow-[0_10px_22px_rgba(11,31,94,.4)] transition hover:bg-crimson-900">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z" /></svg>
                 {t('ct.send')}
               </button>

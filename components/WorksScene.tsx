@@ -10,7 +10,7 @@ import PaperSticker from './PaperSticker'
 function PhoneFeed({ src, ratio, handle = 'Alyah Fitrah Permata' }: { src: string; ratio: 'poster' | 'square' | 'wide'; handle?: string }) {
   const aspect = ratio === 'poster' ? 'aspect-[3/4]' : ratio === 'square' ? 'aspect-square' : 'aspect-[16/10]'
   return (
-    <div className="mx-auto w-[min(250px,62vw)] rounded-[2.2rem] bg-[#15151a] p-2 shadow-[0_28px_50px_rgba(40,0,10,.35)]">
+    <div className="mx-auto w-[min(250px,62vw)] rounded-[2.2rem] bg-[#15151a] p-2 shadow-[0_28px_50px_rgba(6,14,55,.35)]">
       <div className="overflow-hidden rounded-[1.7rem] bg-white">
         <div className="mx-auto mt-1.5 h-4 w-20 rounded-full bg-[#15151a]" />
         <div className="flex items-center gap-2 px-3 py-2">
@@ -86,7 +86,7 @@ export default function WorksScene() {
           <div className="mt-9 grid grid-cols-1 items-start gap-8 sm:grid-cols-2">
             {c.items.map((it, i) => (
               <button key={it.src} onClick={() => setBox({ cat: tab, src: it.src, title: t(`col.${c.id}.title`), desc: t(`col.${c.id}.desc`) })} className="group block text-left" style={{ ['--d' as string]: `${i * 120}ms` } as React.CSSProperties} aria-label={`${t('works.view')}: ${t(`col.${c.id}.title`)}`}>
-                <img src={it.src} alt="" className="mx-auto w-[78%] max-w-[360px] rounded-xl object-cover shadow-[0_22px_40px_rgba(60,0,10,.28)] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[-1.5deg]" loading="lazy" />
+                <img src={it.src} alt="" className="mx-auto w-[78%] max-w-[360px] rounded-xl object-cover shadow-[0_22px_40px_rgba(8,20,70,.28)] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[-1.5deg]" loading="lazy" />
               </button>
             ))}
           </div>
@@ -105,7 +105,7 @@ export default function WorksScene() {
         {(c.kind === 'sheet' || c.kind === 'print') && (
           <div className="mt-9">
             {c.items.map((it) => (
-              <button key={it.src} onClick={() => setBox({ cat: tab, src: it.src, title: t(`col.${c.id}.title`), desc: t(`col.${c.id}.desc`) })} className="group mx-auto block w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-[0_26px_50px_rgba(60,0,10,.2)] ring-1 ring-black/5" aria-label={`${t('works.view')}: ${t(`col.${c.id}.title`)}`}>
+              <button key={it.src} onClick={() => setBox({ cat: tab, src: it.src, title: t(`col.${c.id}.title`), desc: t(`col.${c.id}.desc`) })} className="group mx-auto block w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-[0_26px_50px_rgba(8,20,70,.2)] ring-1 ring-black/5" aria-label={`${t('works.view')}: ${t(`col.${c.id}.title`)}`}>
                 <img src={it.src} alt="" className="aspect-[16/9] w-full object-cover transition duration-700 group-hover:scale-[1.03]" loading="lazy" />
               </button>
             ))}
@@ -127,7 +127,7 @@ export default function WorksScene() {
                 role="tab"
                 aria-selected={tab === i}
                 onClick={() => setTab(i)}
-                className={`shrink-0 rounded-t-xl px-4 py-2.5 text-sm font-bold transition-all duration-300 sm:px-6 ${tab === i ? 'rounded-full bg-crimson-500 text-white shadow-[0_8px_18px_rgba(163,12,43,.35)]' : 'text-crimson-500 hover:bg-crimson-500/5'}`}
+                className={`shrink-0 rounded-t-xl px-4 py-2.5 text-sm font-bold transition-all duration-300 sm:px-6 ${tab === i ? 'rounded-full bg-crimson-500 text-white shadow-[0_8px_18px_rgba(36,87,214,.35)]' : 'text-crimson-500 hover:bg-crimson-500/5'}`}
               >
                 {t(`cat.${c.id}.name`)}
               </button>
@@ -154,7 +154,7 @@ export default function WorksScene() {
             <div className="relative flex justify-center md:justify-end">
               <div className="relative flex h-[min(52vw,300px)] w-full max-w-md items-center justify-center" aria-hidden="true">
                 {fan.map((it, i) => (
-                  <img key={it.src} src={it.src} alt="" className="absolute h-full w-[44%] rounded-2xl border-4 border-white object-cover object-top shadow-[0_24px_44px_rgba(40,0,10,.4)]" style={{ transform: `translateX(${(i - (fan.length - 1) / 2) * 62}%) rotate(${(i - (fan.length - 1) / 2) * 7}deg)`, zIndex: i }} />
+                  <img key={it.src} src={it.src} alt="" className="absolute h-full w-[44%] rounded-2xl border-4 border-white object-cover object-top shadow-[0_24px_44px_rgba(6,14,55,.4)]" style={{ transform: `translateX(${(i - (fan.length - 1) / 2) * 62}%) rotate(${(i - (fan.length - 1) / 2) * 7}deg)`, zIndex: i }} />
                 ))}
               </div>
             </div>

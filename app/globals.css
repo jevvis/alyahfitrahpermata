@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --crimson-900: #5c0112;
-  --crimson-700: #82001e;
-  --crimson-500: #a30c2b;
+  --crimson-900: #0b1f5e;
+  --crimson-700: #17399a;
+  --crimson-500: #2457d6;
   --cream: #f3e5c0;
   --paper: #eae0d4;
-  --wax: #76130e;
+  --wax: #17399a;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 html { scroll-behavior: smooth; }
 body {
   background: #fff;
-  color: #4a0a16;
+  color: #0b1a4d;
   font-family: var(--font-inter), system-ui, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

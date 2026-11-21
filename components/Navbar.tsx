@@ -47,7 +47,7 @@ export default function Navbar() {
     <header className={`no-print fixed left-1/2 top-4 z-50 w-max max-w-[calc(100vw-1rem)] -translate-x-1/2 transition-transform duration-300 sm:top-5 ${hidden ? '-translate-y-24' : ''}`}>
       <nav
         className={`flex items-center gap-0.5 rounded-full border px-1.5 py-1.5 text-[12px] font-bold shadow-lg backdrop-blur-xl transition-colors duration-500 sm:gap-1 sm:text-sm ${
-          onDark ? 'border-white/15 bg-[#5c0112]/70 text-[#f3e5c0]' : 'border-black/5 bg-white/90 text-crimson-700'
+          onDark ? 'border-white/15 bg-[#0b1f5e]/70 text-[#f3e5c0]' : 'border-black/5 bg-white/90 text-crimson-700'
         }`}
         aria-label="Main"
       >
@@ -55,7 +55,7 @@ export default function Navbar() {
           <button
             key={n.id}
             onClick={() => scrollToId(n.id)}
-            className={`rounded-full px-2.5 py-2 transition-all duration-300 sm:px-4 ${active === n.id ? 'bg-crimson-500 text-white shadow-[0_6px_16px_rgba(163,12,43,.45)]' : 'opacity-80 hover:opacity-100'}`}
+            className={`rounded-full px-2.5 py-2 transition-all duration-300 sm:px-4 ${active === n.id ? 'bg-crimson-500 text-white shadow-[0_6px_16px_rgba(36,87,214,.45)]' : 'opacity-80 hover:opacity-100'}`}
             aria-current={active === n.id ? 'true' : undefined}
           >
             {t(n.key)}

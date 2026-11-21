@@ -5,10 +5,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        crimson: { 900: '#5c0112', 700: '#82001e', 600: '#930322', 500: '#a30c2b' },
+        crimson: { 900: '#0b1f5e', 700: '#17399a', 600: '#1c45b8', 500: '#2457d6' },
         cream: '#f3e5c0',
         paper: '#eae0d4',
-        wax: '#76130e',
+        wax: '#17399a',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],

@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.DS_Store
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+dev*.log
+cek/
+gemini-raw/
+slide-scan/
+docs/slide-notes.md
+next.log
+docs/contoh-hasil-pdf.pdf

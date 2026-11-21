@@ -140,7 +140,7 @@ export default function WorksScene() {
       <div key={tab} className="tabin">
         {/* pembuka kategori: layar terbelah diagonal */}
         <div className="relative isolate overflow-hidden bg-white">
-          <div className="absolute inset-y-0 left-0 w-full bg-crimson-700 [clip-path:polygon(0_0,62%_0,38%_100%,0_100%)] md:[clip-path:polygon(0_0,56%_0,40%_100%,0_100%)]" style={{ backgroundImage: monogramBg('AP') , backgroundSize: '170px 170px' }} />
+          <div className="absolute inset-y-0 left-0 w-full bg-crimson-700 [clip-path:none] md:[clip-path:polygon(0_0,56%_0,40%_100%,0_100%)]" style={{ backgroundImage: monogramBg('AP') , backgroundSize: '170px 170px' }} />
           <div className="relative mx-auto grid min-h-[min(78svh,640px)] max-w-6xl items-center gap-8 px-4 py-16 sm:px-10 md:grid-cols-2">
             <div>
               <div className="stick in" style={{ ['--r' as string]: '-3deg' } as React.CSSProperties}>

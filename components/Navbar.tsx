@@ -44,9 +44,9 @@ export default function Navbar() {
 
   const line = onDark ? 'bg-white/20' : 'bg-black/10'
   return (
-    <header className={`no-print fixed left-1/2 top-4 z-50 w-max max-w-[calc(100vw-1rem)] -translate-x-1/2 transition-transform duration-300 sm:top-5 ${hidden ? '-translate-y-24' : ''}`}>
+    <header className={`no-print fixed left-1/2 top-4 z-50 w-max max-w-[calc(100vw-0.5rem)] -translate-x-1/2 transition-transform duration-300 sm:top-5 ${hidden ? '-translate-y-24' : ''}`}>
       <nav
-        className={`flex items-center gap-0.5 rounded-full border px-1.5 py-1.5 text-[12px] font-bold shadow-lg backdrop-blur-xl transition-colors duration-500 sm:gap-1 sm:text-sm ${
+        className={`flex items-center gap-0 rounded-full border px-1 py-1 text-[11px] font-bold whitespace-nowrap shadow-lg backdrop-blur-xl transition-colors duration-500 sm:gap-1 sm:text-sm ${
           onDark ? 'border-white/15 bg-[#0b1f5e]/70 text-[#f3e5c0]' : 'border-black/5 bg-white/90 text-crimson-700'
         }`}
         aria-label="Main"
@@ -55,13 +55,13 @@ export default function Navbar() {
           <button
             key={n.id}
             onClick={() => scrollToId(n.id)}
-            className={`rounded-full px-2.5 py-2 transition-all duration-300 sm:px-4 ${active === n.id ? 'bg-crimson-500 text-white shadow-[0_6px_16px_rgba(36,87,214,.45)]' : 'opacity-80 hover:opacity-100'}`}
+            className={`rounded-full px-2 py-1.5 transition-all duration-300 sm:px-4 sm:py-2 ${active === n.id ? 'bg-crimson-500 text-white shadow-[0_6px_16px_rgba(36,87,214,.45)]' : 'opacity-80 hover:opacity-100'}`}
             aria-current={active === n.id ? 'true' : undefined}
           >
-            {t(n.key)}
+            {n.id === 'works' ? <><span className="sm:hidden">{t('nav.works.s')}</span><span className="hidden sm:inline">{t(n.key)}</span></> : t(n.key)}
           </button>
         ))}
-        <span className={`mx-0.5 h-5 w-px ${line}`} />
+        <span className={`mx-0.5 h-4 w-px sm:h-5 ${line}`} />
         {/* pilihan bahasa: segmen ID | EN */}
         <div className={`flex rounded-full p-0.5 text-[11px] font-extrabold sm:text-xs ${onDark ? 'bg-white/10' : 'bg-black/5'}`} role="group" aria-label="Language">
           {(['id', 'en'] as const).map((l) => (
@@ -69,7 +69,7 @@ export default function Navbar() {
               key={l}
               onClick={() => setLang(l)}
               aria-pressed={lang === l}
-              className={`rounded-full px-2 py-1.5 transition sm:px-2.5 ${lang === l ? (onDark ? 'bg-[#f3e5c0] text-crimson-700' : 'bg-crimson-700 text-white') : 'opacity-70 hover:opacity-100'}`}
+              className={`rounded-full px-1.5 py-1 transition sm:px-2.5 sm:py-1.5 ${lang === l ? (onDark ? 'bg-[#f3e5c0] text-crimson-700' : 'bg-crimson-700 text-white') : 'opacity-70 hover:opacity-100'}`}
             >
               {l.toUpperCase()}
             </button>
@@ -80,7 +80,7 @@ export default function Navbar() {
           onClick={() => window.print()}
           aria-label={t('deck.pdf')}
           title={t('deck.pdf')}
-          className={`ml-0.5 flex items-center gap-1.5 rounded-full px-2.5 py-2 transition sm:px-3.5 ${onDark ? 'bg-[#f3e5c0] text-crimson-700 hover:bg-white' : 'bg-crimson-700 text-white hover:bg-crimson-900'}`}
+          className={`ml-0.5 flex items-center gap-1.5 rounded-full px-2 py-1.5 transition sm:px-3.5 sm:py-2 ${onDark ? 'bg-[#f3e5c0] text-crimson-700 hover:bg-white' : 'bg-crimson-700 text-white hover:bg-crimson-900'}`}
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16" /></svg>
           <span className="hidden sm:inline">PDF</span>

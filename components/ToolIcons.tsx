@@ -1,3 +1,5 @@
+import { useId } from 'react'
+
 // Ikon aplikasi (gambar ulang sebagai SVG, mengikuti bentuk dan warna logo aplikasinya).
 type Props = { k: string; className?: string }
 
@@ -12,18 +14,19 @@ function Doc({ main, fold, children }: { main: string; fold: string; children: R
 }
 
 export default function ToolIcon({ k, className = 'h-12 w-12' }: Props) {
+  const gid = `ic-canva-${useId().replace(/:/g, '')}`
   return (
     <svg viewBox="0 0 48 48" className={`${className} drop-shadow-[0_4px_6px_rgba(6,14,55,.3)]`} role="img" aria-hidden="true">
       {k === 'Ca' && (
         <>
           <defs>
-            <linearGradient id="ic-canva" x1="0.1" y1="0.95" x2="0.9" y2="0.05">
+            <linearGradient id={gid} x1="0.1" y1="0.95" x2="0.9" y2="0.05">
               <stop offset="0" stopColor="#00c4cc" />
               <stop offset="0.55" stopColor="#4f6bf0" />
               <stop offset="1" stopColor="#7d2ae8" />
             </linearGradient>
           </defs>
-          <circle cx="24" cy="24" r="23" fill="url(#ic-canva)" />
+          <circle cx="24" cy="24" r="23" fill={`url(#${gid})`} />
           <path d="M31.6 17.6A11 11 0 1 0 31.6 30.4" fill="none" stroke="#fff" strokeWidth="4.6" strokeLinecap="round" />
         </>
       )}

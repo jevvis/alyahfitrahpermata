@@ -42,8 +42,8 @@ export default function TocRope() {
                 </svg>
                 <span className="pin absolute top-1 z-10 h-6 w-6 rounded-full bg-[radial-gradient(circle_at_35%_30%,#ff6b6b,#b3001b_70%)] shadow-[0_4px_6px_rgba(0,0,0,.45)]" style={{ left: 'calc(50% - 12px)', ['--d' as string]: `${300 + i * 140}ms` } as React.CSSProperties} />
                 <button onClick={() => open(i)} className="sway block w-full" style={{ ['--r' as string]: `${ROT[i]}deg`, ['--d' as string]: `${i * 400}ms` } as React.CSSProperties} aria-label={`${t('toc.open')} ${t(`cat.${c.id}.name`)}`}>
-                  <PaperSticker seed={70 + i} innerClassName="px-5 pb-6 pt-7 sm:px-7">
-                    <span className="block text-center font-script text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.05] text-crimson-700">{t(`cat.${c.id}.name`)}</span>
+                  <PaperSticker seed={70 + i} innerClassName="px-2.5 pb-6 pt-7 sm:px-7">
+                    <span className="block break-words text-center font-script text-[1.05rem] leading-[1.1] text-crimson-700 min-[420px]:text-[1.3rem] sm:text-[clamp(1.5rem,3vw,2.5rem)]">{t(`cat.${c.id}.name`)}</span>
                   </PaperSticker>
                 </button>
               </li>

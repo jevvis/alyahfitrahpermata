@@ -33,8 +33,8 @@ function Title({ children, seed, rot = -3, size = 52, className = '' }: { childr
 function Wax() {
   return (
     <svg width="84" height="84" viewBox="0 0 74 74" aria-hidden="true">
-      <defs><radialGradient id="wx" cx="40%" cy="35%"><stop offset="0" stopColor="#3d6bdc" /><stop offset="1" stopColor="#17399a" /></radialGradient></defs>
-      <path d="M37 4c8 0 11 6 18 8 8 3 14 8 12 17-1 6 5 9 3 17-2 8-9 9-12 15-4 7-12 10-21 9-9-1-13-7-19-12C11 53 4 49 6 41c2-7-3-11 0-18C9 15 17 14 23 9c5-3 8-5 14-5z" fill="url(#wx)" />
+      <defs><radialGradient id="wx-print" cx="40%" cy="35%"><stop offset="0" stopColor="#3d6bdc" /><stop offset="1" stopColor="#17399a" /></radialGradient></defs>
+      <path d="M37 4c8 0 11 6 18 8 8 3 14 8 12 17-1 6 5 9 3 17-2 8-9 9-12 15-4 7-12 10-21 9-9-1-13-7-19-12C11 53 4 49 6 41c2-7-3-11 0-18C9 15 17 14 23 9c5-3 8-5 14-5z" fill="url(#wx-print)" />
       <path d="M37 51c-9-7-14-12-14-18 0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 6-5 11-14 18z" fill="#1f46b0" stroke="#7fa0f2" strokeWidth="1.2" />
     </svg>
   )

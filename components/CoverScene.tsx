@@ -40,7 +40,7 @@ export default function CoverScene() {
           </PaperSticker>
         </div>
 
-        <div className="stick in relative z-20 -mt-8 md:-ml-6 md:mt-0" style={{ ['--r' as string]: '2deg', ['--d' as string]: '250ms', animation: 'none' } as React.CSSProperties}>
+        <div className="stick in relative z-20 mt-4 md:-ml-6 md:mt-0" style={{ ['--r' as string]: '2deg', ['--d' as string]: '250ms', animation: 'none' } as React.CSSProperties}>
           <div className="absolute inset-x-[-6%] bottom-0 top-[22%]">
             <PaperSticker seed={23} tone="paper" className="h-full" innerClassName="h-full w-full">
               <span className="block h-full w-full" />

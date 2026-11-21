@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { CATEGORIES, CONTACT, SOFTWARE } from '@/lib/works'
 import { monogramBg } from '@/lib/paper'
 import PaperSticker from '@/components/PaperSticker'
+import ToolIcon from '@/components/ToolIcons'
 
 const S = (o: Record<string, string | number>) => o as CSSProperties
 const mono = (c?: string): CSSProperties => ({ backgroundImage: monogramBg('AP', c), backgroundSize: '170px 170px' })
@@ -84,7 +85,7 @@ export function AboutSlide() {
               <div className="mt-2 flex gap-3">
                 {SOFTWARE.map((s) => (
                   <span key={s.k} className="flex w-[78px] flex-col items-center gap-1 text-center">
-                    <span className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-crimson-700 font-display text-base text-cream shadow-md">{s.k}</span>
+                    <ToolIcon k={s.k} className="h-[54px] w-[54px]" />
                     <span className="text-[11px] font-bold leading-tight text-crimson-700">{s.n}</span>
                   </span>
                 ))}

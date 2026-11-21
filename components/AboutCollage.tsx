@@ -5,6 +5,7 @@ import { CONTACT, SOFTWARE } from '@/lib/works'
 import { monogramBg } from '@/lib/paper'
 import { scrollToId } from '@/lib/hooks'
 import PaperSticker from './PaperSticker'
+import ToolIcon from './ToolIcons'
 
 function Title({ children, seed, rot = -3, className = '' }: { children: React.ReactNode; seed: number; rot?: number; className?: string }) {
   return (
@@ -53,7 +54,7 @@ export default function AboutCollage() {
                   <div className="mt-2 flex flex-wrap gap-3">
                     {SOFTWARE.map((s) => (
                       <span key={s.k} className="flex w-16 flex-col items-center gap-1 text-center">
-                        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-crimson-700 font-display text-sm text-cream shadow-md transition hover:-translate-y-1 hover:rotate-6">{s.k}</span>
+                        <span className="block transition hover:-translate-y-1 hover:rotate-6"><ToolIcon k={s.k} className="h-12 w-12" /></span>
                         <span className="text-[10px] font-bold leading-tight text-crimson-700">{s.n}</span>
                       </span>
                     ))}

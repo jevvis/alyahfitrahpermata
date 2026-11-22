@@ -59,48 +59,13 @@ export default function AboutCollage() {
                       </span>
                     ))}
                   </div>
-                  <p className="mt-5 text-sm font-extrabold tracking-wide text-crimson-700">{t('sk.hard')}</p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {[1, 2, 3].map((i) => <span key={i} className="rounded-full bg-crimson-700 px-3 py-1 text-xs font-bold text-cream">{t(`sk.h${i}`)}</span>)}
-                  </div>
-                  <p className="mt-4 text-sm font-extrabold tracking-wide text-crimson-700">{t('sk.soft')}</p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {[1, 2, 3, 4, 5, 6, 7].map((i) => <span key={i} className="rounded-full border border-crimson-500/50 px-3 py-1 text-xs font-semibold text-crimson-700">{t(`sk.s${i}`)}</span>)}
-                  </div>
                 </div>
               </div>
-            </PaperSticker>
-          </div>
-
-          <div className="reveal relative mt-10 pt-6" style={{ '--d': '100ms' } as React.CSSProperties}>
-            <div className="absolute left-1 top-0 z-20"><Title seed={9} rot={-2}>{t('about.edu')}</Title></div>
-            <PaperSticker seed={41} tone="paper" innerClassName="px-6 pb-6 pt-14 sm:px-9">
-              <ul className="space-y-4 text-crimson-700">
-                {[1, 2].map((i) => (
-                  <li key={i} className="border-b border-crimson-500/30 pb-3 last:border-0 last:pb-0">
-                    <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-                      <p className="text-base font-extrabold">{t(`edu.${i}.school`)}</p>
-                      <p className="text-sm font-semibold">{t(`edu.${i}.meta`)}</p>
-                    </div>
-                    <p className="text-sm">{t(`edu.${i}.prog`)}</p>
-                  </li>
-                ))}
-              </ul>
             </PaperSticker>
           </div>
         </div>
 
         <div className="space-y-8 md:col-span-5">
-          <div className="reveal relative pt-6" style={{ '--d': '120ms' } as React.CSSProperties}>
-            <div className="absolute left-1 top-0 z-20"><Title seed={8} rot={-2}>{t('about.exp')}</Title></div>
-            <PaperSticker seed={34} tone="paper" innerClassName="relative px-6 pb-6 pt-14">
-              <div className="absolute right-4 top-3 z-10 -rotate-6"><Wax /></div>
-              <p className="max-w-[78%] border-b border-crimson-500/40 pb-2 text-sm font-semibold text-crimson-700">{t('about.exp.1')}</p>
-              <p className="mt-2 max-w-[78%] border-b border-crimson-500/40 pb-2 text-sm text-crimson-700">{t('about.exp.2')}</p>
-              <p className="mt-2 border-b border-crimson-500/40 pb-2 text-sm text-crimson-700">{t('about.exp.3')}</p>
-            </PaperSticker>
-          </div>
-
           <div className="reveal relative pt-6" style={{ '--d': '220ms' } as React.CSSProperties}>
             <div className="absolute left-1 top-0 z-20"><Title seed={13} rot={-3}>{t('about.contact')}</Title></div>
             <PaperSticker seed={55} tone="paper" innerClassName="px-6 pb-6 pt-14">

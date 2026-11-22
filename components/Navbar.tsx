@@ -5,8 +5,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { NAV } from '@/lib/works'
 import { scrollToId } from '@/lib/hooks'
 
-const ORDER = ['cover', 'about', 'toc', 'works', 'contact']
-const MAP: Record<string, string> = { cover: 'cover', about: 'about', toc: 'works', works: 'works', contact: 'contact' }
+const ORDER = ['cover', 'about', 'profile', 'toc', 'works', 'contact']
+const MAP: Record<string, string> = { cover: 'cover', about: 'about', profile: 'profile', toc: 'works', works: 'works', contact: 'contact' }
 
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage()

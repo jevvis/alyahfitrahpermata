@@ -7,6 +7,7 @@ import AboutCollage from '@/components/AboutCollage'
 import TocRope from '@/components/TocRope'
 import WorksScene from '@/components/WorksScene'
 import ContactScene from '@/components/ContactScene'
+import { AwardsSection, EducationSection, ExperienceSection, SkillsSection } from '@/components/ProfileSections'
 import { AboutSlide, CertSlideA, CertSlideB, ContactSlide, CoverSlide, DocSlide, EduExpSlide, FeedSlide, PosterSlide, TocSlide } from '@/components/deck/slides'
 
 export default function Page() {
@@ -18,6 +19,12 @@ export default function Page() {
         <Navbar />
         <CoverScene />
         <AboutCollage />
+        <div id="profile">
+          <EducationSection />
+          <ExperienceSection />
+          <AwardsSection />
+          <SkillsSection />
+        </div>
         <TocRope />
         <WorksScene />
         <ContactScene />

@@ -24,7 +24,7 @@ export const CATEGORIES: Category[] = [
 
 export const CONTACT = {
   email: 'alyahfitrahpermata@gmail.com',
-  instagram: '',
+  instagram: '@alyahftrh_',
   phone: '081244805269',
   whatsapp: '6281244805269',
   linkedin: '',
@@ -39,6 +39,7 @@ export const SOFTWARE = [
 export const NAV = [
   { id: 'cover', key: 'nav.home' },
   { id: 'about', key: 'nav.about' },
+  { id: 'profile', key: 'nav.profile' },
   { id: 'works', key: 'nav.works' },
   { id: 'contact', key: 'nav.contact' },
 ] as const
